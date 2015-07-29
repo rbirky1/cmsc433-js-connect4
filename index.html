@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=490,user-scalable=no">
+    <title>Connect 4</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css"> 
+    <link rel="stylesheet" href="css/colpick.css" type="text/css"/>
+    
+    <!--<script src="path/to/jquery"></script>-->
+
+    <script src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/colpick.js" type="text/javascript"></script>
+    <script src="js/connect4.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+  </head>
+  <body onload="newGame();">
+    
+    <div class="board">
+      
+      <h1>Connect 4</h1>
+      <div class="board-row">
+	<input type="checkbox" value="AI" name="ai_checkbox" id="aiCheck"> Toggle AI/Two Player	(Click New Game to apply change)
+      </div>
+      <div class="board-row">
+	<button id="picker1" class="btn">Player 1 Color</button>
+	<button id="picker2" class="btn">Player 2 Color</button>
+      </div>
+
+      <div class="row-fluid">
+	<div class="span4">
+	  Wins
+	  <!-- container for the wins - you may want to add an id -->
+	  <div class="well" id="wins">
+	    0
+	  </div>
+	</div>
+	
+	<div class="span4">
+	  Losses
+	  <!-- container for the losses - you may want to add an id -->
+	  <div class="well" id="losses">
+	    0
+	  </div>
+	</div>
+
+	<div class="span4">
+	  Ties
+	  <!-- container for the ties - you may want to add an id -->
+	  <div class="well" id="ties">
+	    0
+	  </div>
+	</div>
+      </div>
+      
+      <div class="row-fluid">
+	<!-- canvas on which game is drawn - you may want to add an id -->
+	<canvas width="490" height="490" class="game-canvas" id="thisboard">
+	</canvas>
+      </div>
+      
+      <div class="board-row">
+	<!-- need to bind event handler to reset the scores -->
+	<input type="button" value="Reset Scores" class="btn" id="resetButton">
+	<!-- need to bind event handler to start a new game -->
+	<input type="button" value="New Game"
+	       class="btn" id="newGameButton">
+      </div>
+
+      <!-- Checkbox for whether or not AI is enabled.
+	   Uncomment if you choose to use AI, or come up with
+	   another method of toggling AI -->
+      
+    </div> <!-- end div.board -->
+
+
+
+    <script src="js/birkyc4.js"></script>
+  </body>
+</html>
